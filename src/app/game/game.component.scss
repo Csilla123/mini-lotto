@@ -1,0 +1,26 @@
+
+.game{
+    margin:auto;
+    padding-top:50px;
+    .panels{
+        justify-content: center;
+        display:grid;
+        grid-template-columns: repeat(auto-fit,231px);
+        gap:20px;
+    }
+    .buttons{
+        margin-top:50px;
+        display: flex;
+        justify-content: center;
+        padding-bottom:20px;
+    }
+    .result{
+        display: flex;
+        justify-content: center;
+    }
+    .play{
+        background-color:  rgb(223, 0, 38);
+        color: white;
+        min-width: 231px;
+    }
+}

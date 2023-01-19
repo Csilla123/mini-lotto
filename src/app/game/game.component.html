@@ -1,0 +1,13 @@
+<div class="game">
+    <div class="panels">
+        <app-panel *ngFor="let panel of panels; index as i" [panelNumber]=i+1 [fieldCount]="fieldCount" [betLength]="betLength"></app-panel> 
+    </div>
+    <div class="buttons">
+        <button class="play" mat-raised-button (click)="play()">Play</button>
+    </div>
+    <div class="result"  [hidden]="!showResult" #result>
+        <mat-list role="list">
+            <mat-list-item role="listitem" *ngFor="let result of results; index as i"><b>Panel {{i+1}}:</b> {{result}}</mat-list-item>
+          </mat-list>
+    </div>
+</div>

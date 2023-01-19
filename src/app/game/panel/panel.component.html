@@ -1,0 +1,18 @@
+<div class="panel-wrapper">
+    <div class="actions">
+        <div class="random" (click)="getRandomBet()"><img src="/assets/rnd.png" alt="random"></div>
+        <div class="delete" (click)="deleteSelections()"><img src="/assets/del.png" alt="delete"></div>
+    </div>
+    <div class="panel-container">
+        <div class="panel">
+            <div class="fields-wrapper" *ngFor="let item of fields; index as i">
+                <div class="field" [ngClass]="{'selected': item.selected===true}" (click)="onItemClick(i)">{{i+1}}
+                </div>
+                <div class="strike" [ngStyle]="{'visibility': item.selected===true ? 'visible' : 'hidden'}">X</div>
+            </div>
+        </div>
+        <div class="panel-number">
+            <p>{{panelNumber}}</p>
+        </div>
+    </div>
+</div>
