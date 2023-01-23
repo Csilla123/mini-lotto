@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
 import { reducers } from './store/play.reducers-map';
+import { CookieService } from 'ngx-cookie-service';
 
 
 @NgModule({
@@ -29,7 +30,9 @@ import { reducers } from './store/play.reducers-map';
     MatInputModule,
     MatIconModule
   ],
-  providers: [],
+  providers: [
+    CookieService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
